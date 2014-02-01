@@ -35,8 +35,8 @@ Members: {{ info.clan.memberCount }}<br>
 
 <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">Players</div>
-  <div class="panel-body">
+  <div class="panel-heading hidden-xs">Players</div>
+  <div class="panel-body hidden-xs">
     <p>...</p>
   </div>
 
@@ -49,7 +49,7 @@ Members: {{ info.clan.memberCount }}<br>
     {% for user in filled %}
 		<tr>
 			<td><img src="{{ user.data.avatar.small }}">&nbsp;{{ user.data.gamertag }}</td>
-			<td>{% if user.data.online %}<span class="label label-success">ONLINE</span> {% else %}<span class="label label-danger">OFFLINE</span> {{ user.data.presence }} {% endif %}</td>
+			<td>{% if user.data.online %}<span class="label label-success">ONLINE</span> {% else %}<span class="label label-danger">OFFLINE</span> <span class="hidden-xs">{{ user.data.presence }}</span> {% endif %}</td>
 		</tr>
 	{% endfor %}
   </table>
