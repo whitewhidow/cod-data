@@ -13,7 +13,7 @@ class DefaultController extends Controller
     	error_reporting(E_ALL);
     	ini_set('display_errors', '1');
     	
-    	$users = array("white whidow", "yusukiho", "big budha haze", "SevenCircle9");
+    	$users = array("white whidow", "yusukiho", "big budha haze", "solevita");
     	$filled = new ArrayCollection();
     	
     	$info = file_get_contents('https://widget.live-ca.callofduty.com/widgets/mycod/xbox/Njk3Mjc2NDoxMzkyMzgxNDg2ODIzOmQyNjVlZjdjYjI3YzY2NjFhNmQ5MGNjZDA2ODc1NTM2');
