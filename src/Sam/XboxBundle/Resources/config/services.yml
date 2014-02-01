@@ -1,0 +1,7 @@
+parameters:
+#    sam_xbox.example.class: Sam\XboxBundle\Example
+
+services:
+#    sam_xbox.example:
+#        class: %sam_xbox.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

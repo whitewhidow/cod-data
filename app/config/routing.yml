@@ -1,0 +1,4 @@
+sam_xbox:
+    resource: "@SamXboxBundle/Resources/config/routing.yml"
+    prefix:   /
+

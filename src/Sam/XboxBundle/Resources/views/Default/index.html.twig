@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<title>PSTL Players</title>
+</head>
+
+<body>
+
+<div class="well">
+
+<h1>{{ info.clan.name }}</h1>
+Level: {{ info.clan.clanLevel }}<br>
+K/D Ratio: {{ info.clan.kdr }}<br>
+WIN Ratio: {{ info.clan.winr }}<br>
+Members: {{ info.clan.memberCount }}<br>
+
+</div>
+
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Players</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+  	<tr>
+  		<th>Player</th>
+  		<th>Status</th>
+  	</tr>
+    {% for user in filled %}
+		<tr>
+			<td><img src="{{ user.data.avatar.small }}">&nbsp;{{ user.data.gamertag }}</td>
+			<td>{% if user.data.online %}<span class="label label-success">ONLINE</span> {% else %}<span class="label label-danger">OFFLINE</span> {{ user.data.presence }} {% endif %}</td>
+		</tr>
+	{% endfor %}
+  </table>
+</div>
+
+
+</body>
+
+</html>
